@@ -4,14 +4,15 @@ void main() {
   runApp(
     MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.amber[200],
         appBar: AppBar(
-          title: Center(child: Text('Hoş Geldiniz')),
-          backgroundColor: Colors.amber,
+          title: Center(
+            child: Text("Hoşgeldiniz"),
+          ),
+          backgroundColor: Colors.deepOrange,
         ),
         body: Center(
-          child: Image(
-            image: AssetImage('images/diamond.jpg'),
+          child: Image.network(
+            'https://foto.leggo.it/photos/HIGH/04/63/100463_20150328_94175_bianca.jpg',
           ),
         ),
       ),
