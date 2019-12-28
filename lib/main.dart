@@ -19,7 +19,9 @@ class MyApp extends StatelessWidget {
                 radius: 50,
                 backgroundImage: AssetImage('images/profile.jfif'),
               ),
-              SizedBox(height: 10),
+              SizedBox(
+                height: 10,
+              ),
               Text(
                 'Burak Nevruzoğlu',
                 style: TextStyle(
