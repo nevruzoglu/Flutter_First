@@ -16,8 +16,36 @@ class MyApp extends StatelessWidget {
           backgroundColor: Colors.black,
         ),
         body: Center(
-          child: Image.network(
-            'https://s.abcnews.com/images/Lifestyle/GTY_kitten_lpl_130930_16x9_992.jpg',
+          child: Column(
+            mainAxisSize: MainAxisSize.max,
+            verticalDirection: VerticalDirection.up,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: <Widget>[
+              Container(
+                height: 100,
+                width: 100,
+                color: Colors.red,
+                child: Text("Container1"),
+                alignment: Alignment.topCenter,
+                padding: EdgeInsets.fromLTRB(0, 30, 0, 0),
+              ),
+              Container(
+                height: 100,
+                width: 100,
+                color: Colors.blue,
+                child: Text("Container2"),
+                alignment: Alignment.topCenter,
+                padding: EdgeInsets.fromLTRB(0, 30, 0, 0),
+              ),
+              Container(
+                height: 100,
+                width: 100,
+                color: Colors.green,
+                child: Text("Container3"),
+                alignment: Alignment.topCenter,
+                padding: EdgeInsets.fromLTRB(0, 30, 0, 0),
+              )
+            ],
           ),
         ),
       ),
