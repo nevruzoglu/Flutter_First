@@ -9,46 +9,42 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          title: Center(
-            child: Text("Hoşgeldiniz"),
-          ),
-          backgroundColor: Colors.black,
-        ),
-        body: Center(
-          child: Column(
-            mainAxisSize: MainAxisSize.max,
-            verticalDirection: VerticalDirection.up,
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: <Widget>[
-              Container(
-                height: 100,
-                width: 100,
-                color: Colors.red,
-                child: Text("Container1"),
-                alignment: Alignment.topCenter,
-                padding: EdgeInsets.fromLTRB(0, 30, 0, 0),
-              ),
-              Container(
-                height: 100,
-                width: 100,
-                color: Colors.blue,
-                child: Text("Container2"),
-                alignment: Alignment.topCenter,
-                padding: EdgeInsets.fromLTRB(0, 30, 0, 0),
-              ),
-              Container(
-                height: 100,
-                width: 100,
-                color: Colors.green,
-                child: Text("Container3"),
-                alignment: Alignment.topCenter,
-                padding: EdgeInsets.fromLTRB(0, 30, 0, 0),
-              )
-            ],
-          ),
-        ),
-      ),
+          backgroundColor: Colors.teal,
+          body: SafeArea(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                Container(
+                  color: Colors.red,
+                  width: 100,
+                ),
+                Container(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Container(
+                        color: Colors.yellow,
+                        width: 100,
+                        height: 100,
+                      ),
+                      Opacity(
+                        opacity: 0.4,
+                        child: Container(
+                          color: Colors.yellow,
+                          width: 100,
+                          height: 100,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Container(
+                  color: Colors.blue,
+                  width: 100,
+                ),
+              ],
+            ),
+          )),
     );
   }
 }
